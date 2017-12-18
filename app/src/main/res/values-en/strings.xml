@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">The booming application !</string>
+    <string name="go">Go</string>
+    <string name="facebook_application_id" translatable="false">1809914232370472</string>
+    <string name="facebook_login_protocol_scheme"
+        translatable="false">fb1809914232370472</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="imageUploaded" />
+    <string name="action_list">Users list</string>
+    <string name="filter_dialog_title">Filter</string>
+    <string name="action_bomb">Bomb it !</string>
+    <string name="cible">target</string>
+    <string name="action_bomber">Send the bomb again</string>
+
+    <string name="bombedText">You have been bomb by </string>
+    <string name="target">target</string>
+    <string name="source">assailant</string>
+    <string name="resendBomb">Resend the bomb</string>
+    <string name="nouserresponse">No response</string>
+    <string name="userbusy">User is busy</string>
+    <string name="cantbombme">You can\'t bomb yourself</string>
+    <string name="bombexplosed">Bom explosed</string>
+    <string name="win">Win !</string>
+    <string name="lost">Lost !</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">AndroBoum</string>
+    <string name="title">L\'application qui fait boum !</string>
+    <string name="copyright">\@Emilie PERIER - 2017</string>
+    <string name="go">Démarrer</string>
+    <string name="facebook_application_id" translatable="false">1809914232370472</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb1809914232370472</string>
+    <string name="action_logout">Log</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="email">Email</string>
+    <string name="imageUploaded" />
+    <string name="action_list">Liste des utilisateurs</string>
+    <string name="filter_dialog_title">Filtrer</string>
+    <string name="action_bomb">Bomber !</string>
+    <string name="cible">cible</string>
+    <string name="action_bomber">renvoyer la bombe</string>
+
+    <string name="bombedText">Vous avez été bombé par </string>
+    <string name="target">cible</string>
+    <string name="source">attaquant</string>
+    <string name="resendBomb">Renvoyer la bombe</string>
+    <string name="nouserresponse">Pas de réponse de l\'utilisateur</string>
+    <string name="userbusy">L\'utilisateur est occupé</string>
+    <string name="cantbombme">Vous ne pouvez pas vous bomber vous même !</string>
+    <string name="bombexplosed">La bombe a explosé !</string>
+    <string name="win">Gagné !</string>
+    <string name="lost">Perdu !</string>
+
+
+</resources>

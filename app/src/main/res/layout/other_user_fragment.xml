@@ -6,57 +6,58 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="com.example.perie.androboum.OtherUserActivity">
 
-<ImageView
-    android:id="@+id/user_profil"
-    android:layout_width="128dp"
-    android:layout_height="124dp"
-    android:layout_marginBottom="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    app:layout_constraintBottom_toTopOf="@+id/mail_user"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/toolbar_user"
-    app:srcCompat="@drawable/ic_person_black_24dp" />
+    <ImageView
+        android:id="@+id/user_profil"
+        android:layout_width="128dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/score_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_user"
+        app:layout_constraintVertical_bias="0.833"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
 
-<TextView
-    android:id="@+id/mail_user"
-    android:layout_width="183dp"
-    android:layout_height="15dp"
-    android:layout_marginBottom="96dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp"
-    android:text="@string/email"
-    app:layout_constraintBottom_toTopOf="@+id/action_bomb"
-    app:layout_constraintEnd_toStartOf="@+id/connect"
-    app:layout_constraintHorizontal_bias="0.36"
-    app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/mail_user"
+        android:layout_width="183dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginStart="36dp"
+        android:text="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/action_bomb"
+        app:layout_constraintStart_toStartOf="parent" />
 
-<ImageView
-    android:id="@+id/connect"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:layout_marginEnd="36dp"
-    android:layout_marginTop="8dp"
-    app:layout_constraintBottom_toTopOf="@+id/action_bomb"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/user_profil"
-    app:layout_constraintVertical_bias="0.476"
-    app:srcCompat="@drawable/ic_verified_user_black_24dp" />
+    <ImageView
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/action_bomb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.386"
+        app:layout_constraintStart_toEndOf="@+id/mail_user"
+        app:layout_constraintTop_toBottomOf="@+id/score_user"
+        app:layout_constraintVertical_bias="0.224"
+        app:srcCompat="@drawable/ic_verified_user_black_24dp" />
 
-<Button
-    android:id="@+id/action_bomb"
-    android:layout_width="wrap_content"
-    android:layout_height="51dp"
-    android:layout_marginBottom="64dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp"
-    android:text="@string/action_bomb"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/action_bomb"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/action_bomb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_user"
@@ -69,6 +70,34 @@ tools:context="com.example.perie.androboum.OtherUserActivity">
         app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score_user"
+        android:layout_width="60dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/mail_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="71dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/score"
+        app:layout_constraintBottom_toTopOf="@+id/mail_user"
+        app:layout_constraintEnd_toStartOf="@+id/score_user"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profil"
+        app:layout_constraintVertical_bias="0.423" />
 
 </android.support.constraint.ConstraintLayout>
 

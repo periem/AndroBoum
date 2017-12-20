@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -45,7 +48,8 @@ public class UserListActivity extends AppCompatActivity {
         userList = new ArrayList<>();
         setContentView(R.layout.activity_user_list);
         ListView listeView = (ListView) findViewById(R.id.list_view);
-        Button choix =(Button) findViewById(R.id.choix);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar3);
+        setSupportActionBar(myToolbar);
         //final MyArrayAdapter
         adapter = new MyArrayAdapter(this, android.R.layout.simple_list_item_1, userList);
         listeView.setAdapter(adapter);
@@ -68,13 +72,6 @@ public class UserListActivity extends AppCompatActivity {
         };
         mDatabase.addValueEventListener(postListener);
 
-        //ce qu'on fait lorsqu'on on click sur le bouton choix
-        choix.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                showFilterDialog();
-            }
-        });
-
         //ce qu'on fait lorsqu'on click sur un user de la liste affichée
         listeView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -88,6 +85,31 @@ public class UserListActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.actions_users, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_filtre:
+                // choix de l'action "Filtre"
+                showFilterDialog();
+
+                return true;
+            case R.id.action_map:
+                // choix de l'action Map
+                Intent intent = new Intent(this, MapsActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                /// aucune action reconnue
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     private class MyArrayAdapter extends ArrayAdapter<Profil> {
         List<Profil> liste, origListe;
@@ -122,6 +144,7 @@ public class UserListActivity extends AppCompatActivity {
             ImageView imageProfilView = (ImageView) layout.findViewById(R.id.imageView);
             TextView textView = (TextView) layout.findViewById(R.id.textView);
             ImageView imageConnectedView = (ImageView) layout.findViewById(R.id.imageView2);
+            TextView scoreUser = (TextView) layout.findViewById(R.id.score_list);
             // on télécharge dans le premier composant l'image du profil
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference photoRef = storage.getReference().child(p.getEmail() + "/photo.jpg");
@@ -134,9 +157,9 @@ public class UserListActivity extends AppCompatActivity {
             }
             // on positionne le email dans le TextView
             textView.setText(p.getEmail());
-
-            // si l'utilisateur n'est pas connecté, on rend invisible le troisième
-            // composant
+            //on instancie le score
+            scoreUser.setText(String.valueOf(p.getScore()));
+            // si l'utilisateur n'est pas connecté, on rend invisible le troisième composant
             if (!p.isConnected) {
                 imageConnectedView.setVisibility(View.INVISIBLE);
             }

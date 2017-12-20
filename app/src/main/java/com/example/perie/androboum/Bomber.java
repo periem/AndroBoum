@@ -51,9 +51,7 @@ public class Bomber {
 
     BomberInterface callback;
 
-    // méthode appelée pour positionner les deux callbacks.
-    // si cette méthode est appelée alors que je suis déjà un bombed ou un bomber
-    // j'appelle immédiatement les callbacks.
+    // méthode appelée pour positionner les deux callbacks. si cette méthode est appelée alors que je suis déjà un bombed ou un bombe j'appelle immédiatement les callbacks.
     public void setCallback(BomberInterface callback) {
         this.callback = callback;
         if (me.getStatut() == Profil.BombStatut.BOMBED) callback.userBombed();
@@ -89,7 +87,7 @@ public class Bomber {
 
                 // j'en extrait l'identité de l'autre.
                 other.setUid(newme.getOtherUserUID());
-                other.setEmail(newme.getOtherUserEmail());
+                other.setEmail(newme.getOtherUseremail());
                 // si je viens de me faire "bomber" et qu'on attend de moi un acquittement
                 if (newme.getStatut() == Profil.BombStatut.AWAITING && (me == null || me.getStatut() != Profil.BombStatut.AWAITING)) {
                     // je passe dans l'état "bombé" et je fais apparaître
@@ -128,7 +126,7 @@ public class Bomber {
     private void notifyBombed() {
         // spécification de la notification
         final String NOTIFICATION_CHANNEL_ID = "4655";
-//Notification Channel
+        //Notification Channel
         CharSequence channelName = "toto";
         int importance = NotificationManager.IMPORTANCE_LOW;
         NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, importance);

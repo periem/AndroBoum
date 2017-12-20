@@ -44,7 +44,7 @@ public class BombActivity extends AppCompatActivity {
         }
 
         final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        final TextView textView = (TextView) findViewById(R.id.cible);
+        final TextView cible = (TextView) findViewById(R.id.cible);
         final TextView textViewOther = (TextView) findViewById(R.id.textViewOther);
         final Button button = (Button) findViewById(R.id.button);
 
@@ -70,7 +70,7 @@ public class BombActivity extends AppCompatActivity {
                 textViewOther.setText(context.getResources().getString(R.string.source));
 
                 // on note l'email dans le cible
-                textView.setText(AndroBoumApp.getBomber().getOther().getEmail());
+                cible.setText(AndroBoumApp.getBomber().getOther().getEmail());
 
                 // on calcule le temps qui reste
                 long timeleft = Bomber.timetoboum - (System.currentTimeMillis() - Bomber.bombedTime);
@@ -118,8 +118,8 @@ public class BombActivity extends AppCompatActivity {
 
                 // on note "cible" dans l'intitulé
                 textViewOther.setText(context.getResources().getString(R.string.target));
-                // on note l'email dans le cible
-                textView.setText(AndroBoumApp.getBomber().getOther().getEmail());
+                // on note l'email dans la cible
+                cible.setText(AndroBoumApp.getBomber().getOther().getEmail());
 
                 // on calcule le temps qui reste
                 long timeleft = Bomber.timetoboum - (System.currentTimeMillis() - Bomber.bombedTime);

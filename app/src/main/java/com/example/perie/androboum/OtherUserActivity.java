@@ -109,6 +109,7 @@ public class OtherUserActivity extends AppCompatActivity {
             ImageView profil_user = (ImageView) layout.findViewById(R.id.user_profil);
             ImageView connect_user = (ImageView) layout.findViewById(R.id.connect);
             TextView mail_user = (TextView) layout.findViewById(R.id.mail_user);
+            TextView score_user = (TextView) layout.findViewById(R.id.score_user);
             // récupération de l'image du profil
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference photoRef = storage.getReference().child(p.getEmail() + "/photo.jpg");
@@ -125,7 +126,8 @@ public class OtherUserActivity extends AppCompatActivity {
             // récupération de l'email
             mail_user.setText(p.getEmail());
             Log.v("Androboum", "bingo" + p.getEmail());
-
+            //récupération du score
+            score_user.setText(String.valueOf(p.getScore()));
             //ajout de la possibilité de bomber l'individu
             Button bomber = (Button) layout.findViewById(R.id.action_bomb);
             bomber.setOnClickListener(new View.OnClickListener() {

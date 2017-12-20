@@ -16,8 +16,8 @@
     <string name="action_bomber">Send the bomb again</string>
 
     <string name="bombedText">You have been bomb by </string>
-    <string name="target">target</string>
-    <string name="source">assailant</string>
+    <string name="target">Target</string>
+    <string name="source">Assailant</string>
     <string name="resendBomb">Resend the bomb</string>
     <string name="nouserresponse">No response</string>
     <string name="userbusy">User is busy</string>
@@ -25,5 +25,6 @@
     <string name="bombexplosed">Bom explosed</string>
     <string name="win">Win !</string>
     <string name="lost">Lost !</string>
+    <string name="score">SCORE :</string>
 
 </resources>

@@ -12,8 +12,10 @@ public class Profil {
     enum BombStatut {IDLE, AWAITING, BOMBER, BOMBED};
     private BombStatut statut = BombStatut.IDLE;
     private String otherUserUID;
-    private String otherUserEmail;
+    private String otherUseremail;
     private long score=0;
+    private double latitude;
+    private double longitude;
 
     public Profil() {}
 
@@ -41,12 +43,12 @@ public class Profil {
         this.uid = uid;
     }
 
-    public String getOtherUserEmail(){
-        return otherUserEmail;
+    public String getOtherUseremail(){
+        return otherUseremail;
     }
 
-    public void setOtherUserEmail(String otherUserEmail){
-        this.otherUserEmail = otherUserEmail;
+    public void setOtherUseremail(String otherUseremail){
+        this.otherUseremail = otherUseremail;
     }
 
     public String getOtherUserUID(){
@@ -71,6 +73,22 @@ public class Profil {
 
     public void setStatut(BombStatut statut){
         this.statut = statut;
+    }
+
+    public double getLongitude(){
+        return longitude;
+    }
+
+    public double getLatitude(){
+        return latitude;
+    }
+
+    public void setLongitude(double longitude){
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(double latitude){
+        this.latitude = latitude;
     }
 
 }

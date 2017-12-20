@@ -60,7 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
                     userList.add(child.getValue(Profil.class));
                 }
-               
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
